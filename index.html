@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/experiences.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script defer src="js/app.js"> </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Portfolio Web Developer</title>
+</head>
+<body>
+    <header class="topheader">
+        <nav class="topnav"> 
+            <a href="#" class="logo">
+                <img src="img/foto1.png" alt="web developer">
+                <div> Edu RM  <br> {code} </div>
+            </a>
+            <button class="open-menu" aria-label="Abrir menú">
+                <img src="img/hamburger-icon.svg" alt="abrir menú">
+            </button>
+            <ul class="menu">
+                <button class="close-menu" aria-label="Cerrar menú">
+                    <img src="img/close-icon.svg" alt="cerrar menú">
+                </button>
+                <li><a href="#profile" class="selected"> Perfil </a></li>
+                <li><a href="#experience"> Experiencia </a></li>
+                <li><a href="#skills"> Habilidades </a></li>
+                <li><a href="#contact"> Contacto </a></li>
+            </ul>
+        </nav>   
+    </header>
+
+    <div class="horizontal-padding vertical-padding">
+        <section class="profile" id="profile">
+            <div class="profile-info">
+                <h1 class="profile-title"> Frontend Developer Junior </h1>
+                <p class="profile-details">
+                    I design and code beautifully simple things, and I love what I do.
+                </p>
+            </div>
+            <div class="profile-img-section">
+                <img class="profile-img" src="img/foto1.png" alt="front end developer">
+            </div>
+        </section>
+    </div>
+
+    <section class="experiences" id="experience">
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
+            .path-0{
+              animation:pathAnim-0 4s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite;
+            }
+            @keyframes pathAnim-0{
+              0%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 207.5,214 415,228 655,228 C 895,228 1167.5,214 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              25%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 299,218 598,236 838,236 C 1078,236 1259,218 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              50%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 241,225.5 482,251 722,251 C 962,251 1201,225.5 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              75%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 211.5,181 423,162 663,162 C 903,162 1171.5,181 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+              100%{
+                d: path("M 0,400 C 0,400 0,200 0,200 C 207.5,214 415,228 655,228 C 895,228 1167.5,214 1440,200 C 1440,200 1440,400 1440,400 Z");
+              }
+            }</style><path d="M 0,400 C 0,400 0,200 0,200 C 207.5,214 415,228 655,228 C 895,228 1167.5,214 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#124f88" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+        <div class="experiences-body">
+           <h2 class="experiences-title"> Experiencia y Formación </h2>
+           <div class="experiences-grid">
+            <div class="empty"></div>
+            <div class="line"></div>
+            <div class="experience">
+                <div class="experience-date"> 2022 </div>
+                <div class="experience-company"> BCN Activa </div>
+                <div class="experience-position"> Curso React.js </div>
+                <div class="experience-description">  </div>
+            </div>
+            <div class="experience experience_left">
+                <div class="experience-date"> 2015 - 2021 </div>
+                <div class="experience-company"> ATOS IT / INET IT </div>
+                <div class="experience-position"> Help Desk  </div>
+                <div class="experience-description"> Dar soporte informático para administración pública,TV y proyecto Generalitat de Dep.Educación </div>
+            </div>
+           
+            <div class="line"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="line"></div>
+            <div class="experience">
+                <div class="experience-date"> 2018</div>
+                <div class="experience-company"> IES JOAN D'AUSTRIA </div>
+                <div class="experience-position"> Grado Superior Desarollo aplicaciones web </div>
+                <div class="experience-description"> </div>
+            </div>
+           </div>
+        </div>
+       <img src="img/svg.png">
+    </section>
+
+    <div class="horizontal-padding vertical-padding">
+        <section class="skills" id="skills">
+            <h2 class="skills-title"> Habilidades </h2>
+            <ul class="skills-list">
+                <li class="skills-skill"> CSS </li>    
+                <li class="skills-skill"> SASS </li>   
+                <li class="skills-skill"> HTML </li>    
+                <li class="skills-skill"> React.js </li>    
+                <li class="skills-skill"> TypeScript </li>    
+                <li class="skills-skill"> JavaScript </li>    
+            </ul>
+        </section>    
+    </div>
+    <div class="horizontal-padding vertical-padding">
+        <section class="contact" id="contact">
+            <h2 class="contact-title"> Contacto </h2>
+            <div class="contact-details">
+                <div class="contact-details-group">
+                    <p class="contact-label"> Dirección: </p>
+                    <p class="contact-text"> Barcelona, Spain </p>
+                </div>    
+                <div class="contact-details-group">
+                    <p class="contact-label"> Email: </p>
+                    <p class="contact-text"> erafegas@gmail.com </p>
+                </div>    
+                <div class="contact-details-group">
+                    <p class="contact-text"> Deja tu mensaje y con gusto lo responderé </p>
+                </div>    
+            </div>
+            <form class="contact-form">
+                <div class="contact-form-group">
+                    <label for="name"> Nombre </label>
+                    <input required type="text" name="name" id="name">
+                </div>
+                <div class="contact-form-group">
+                    <label for="name"> Email</label>
+                    <input required type="email" name="email" id="email">
+                </div>
+                <div class="contact-form-group">
+                    <label for="name">  Mensaje </label>
+                    <textarea required type="text" name="message" id="message" rows="6"> </textarea>
+                </div>
+                <button type="submit" class="contact-form-submit"> Enviar </button>
+            </form>
+            <nav class="social">
+                <ul class="social-list">
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/in/eduard-rm/" class="social-link">
+                            <img src="img/github.svg" alt="github profile">
+                        </a> 
+                    </li>
+                    <li class="social-item">
+                        <a href="https://github.com/erafegas" class="social-link">
+                            <img src="img/linkedin.svg" alt="linkedin profile">
+                        </a> 
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </div>
+</body>
+</html>
