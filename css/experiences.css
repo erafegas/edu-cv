@@ -8,6 +8,19 @@
     color: var(--text-color-inverse);
 }
 
+.wave {
+    width: 100%;
+    position: relative;
+    top: 2px;
+    color: var(--primary-color);
+}
+
+.wave_bottom {
+    transform:scaleX(-1);
+    top: -2px;
+    
+}
+
 .experiences-title {
     text-align: center;
     text-transform: uppercase;

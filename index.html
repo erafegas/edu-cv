@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Web Developer</title>
+    <script>
+        (function() {
+            const userTheme = localStorage.getItem("theme");
+        const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        if (userTheme === "dark" || (!userTheme && darkQuery.matches)) {
+            setTheme("dark");
+        }
 
+        darkQuery.addEventListener("change", function (e) {
+            if (!localStorage.getItem("theme"))
+            setTheme(e.matches ? "dark" : "light");
+        }); 
+
+        function setTheme(newTheme) {
+            document.documentElement.setAttribute("data-theme", newTheme);
+        }
+
+         window.__setUserTheme = function(newTheme) {
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+        }
+
+        })();
+    </script>
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
@@ -17,6 +40,7 @@
     <link rel="stylesheet" href="css/experiences.css">
     <link rel="stylesheet" href="css/contact.css">
     <script defer src="js/app.js"> </script>
+    <script defer src="js/colorToggle.js"> </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
@@ -29,9 +53,7 @@
                 <img src="img/foto1.png" alt="web developer">
                 <div> Edu RM  <br> {code} </div>
             </a>
-            <button class="open-menu" aria-label="Abrir menú">
-                <img src="img/hamburger-icon.svg" alt="abrir menú">
-            </button>
+    
             <ul class="menu">
                 <button class="close-menu" aria-label="Cerrar menú">
                     <img src="img/close-icon.svg" alt="cerrar menú">
@@ -41,6 +63,43 @@
                 <li><a href="#skills"> Habilidades </a></li>
                 <li><a href="#contact"> Contacto </a></li>
             </ul>
+            <button class="dark-mode-btn" aria-label="Activar modo oscuro">
+                <img src="img/sun.svg" alt="" />
+            </button>
+            <button class="light-mode-btn" aria-label="Activar modo claro">
+                <img src="img/moon.svg" alt="" />
+            </button>
+            <button class="open-menu" aria-label="Abrir menú">
+                <svg 
+                width="29"
+                height="29" 
+                viewBox="0 0 29 29" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path 
+                    d="M2 14.5H27"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    />
+                    <path 
+                    d="M2 2H27" 
+                    stroke="currentColor" 
+                    stroke-width="3" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"
+                    />
+                    <path 
+                    d="M2 27H27" 
+                    stroke="currentColor" 
+                    stroke-width="3" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"
+                    />
+                </svg>
+            </button>
         </nav>   
     </header>
 
@@ -59,7 +118,7 @@
     </div>
 
     <section class="experiences" id="experience">
-        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 400" xmlns="http://www.w3.org/2000/svg" class="wave transition duration-300 ease-in-out delay-150"><style>
             .path-0{
               animation:pathAnim-0 4s;
               animation-timing-function: linear;
@@ -81,7 +140,7 @@
               100%{
                 d: path("M 0,400 C 0,400 0,200 0,200 C 207.5,214 415,228 655,228 C 895,228 1167.5,214 1440,200 C 1440,200 1440,400 1440,400 Z");
               }
-            }</style><path d="M 0,400 C 0,400 0,200 0,200 C 207.5,214 415,228 655,228 C 895,228 1167.5,214 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="none" stroke-width="0" fill="#124f88" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
+            }</style><path fill="currentColor"  d="M 0,400 C 0,400 0,200 0,200 C 207.5,214 415,228 655,228 C 895,228 1167.5,214 1440,200 C 1440,200 1440,400 1440,400 Z" stroke="currentColor" stroke-width="0" fill="#124f88" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
         <div class="experiences-body">
            <h2 class="experiences-title"> Experiencia y Formación </h2>
            <div class="experiences-grid">
@@ -111,7 +170,18 @@
             </div>
            </div>
         </div>
-       <img src="img/svg.png">
+     <svg 
+     class="wave wave_bottom"
+     viewBox="0 0 1400 343" 
+     fill="none"
+     xmlns="http://www.w3.org/2000/svg"
+     >
+    <path 
+        fill="currentColor" 
+        fill-opacity="1" 
+        d="M0,0L30,26.7C60,53,120,107,180,117.3C240,128,300,96,360,74.7C420,53,480,43,540,80C600,117,660,203,720,240C780,277,840,267,900,234.7C960,203,1020,149,1080,149.3C1140,149,1200,203,1260,213.3C1320,224,1380,192,1410,176L1440,160L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
+    </path>
+    </svg>
     </section>
 
     <div class="horizontal-padding vertical-padding">
@@ -143,7 +213,7 @@
                     <p class="contact-text"> Deja tu mensaje y con gusto lo responderé </p>
                 </div>    
             </div>
-            <form class="contact-form" name="conact" netlify>
+            <form class="contact-form" name="contact" netlify>
                 <div class="contact-form-group">
                     <label for="name"> Nombre </label>
                     <input required type="text" name="name" id="name">
